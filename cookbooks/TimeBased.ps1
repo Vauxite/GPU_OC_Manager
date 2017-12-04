@@ -1,8 +1,8 @@
 param(
     [Parameter(Mandatory=$true)]
-    [string[]]$StartDates,
+    [string[]]$StartTime,
     [Parameter(Mandatory=$true)]
-    [string[]]$EndDates,
+    [string[]]$EndTime,
     [Parameter(Mandatory=$true)]
     [int[]]$ABProfile
 
@@ -42,7 +42,7 @@ function inTime{
 
 
 #Transitive property of equality. Make sure all arrays are of equal length.
-if(($StartTime.Length -eq $EndTime.Length) -and ($StartTime.Length -eq $Profile.Length)){
+if(($StartTime.Count -eq $EndTime.Count) -and ($StartTime.Count -eq $ABProfile.Count)){
     $now = Get-Date -Format HH:mm
     $arrC = 0
     foreach($range in $StartTime){
