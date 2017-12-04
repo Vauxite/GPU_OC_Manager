@@ -1,12 +1,7 @@
 ﻿param(
     [Parameter(Mandatory=$true)]
-    [string]$event
+    [int]$profile
 )
-#Set global variables
-$onUnlock = 3
-$onLock = 1
-$onUnlockMsg = "Maximum Performance"
-$onlockMsg = "Minig Performance"
 
 #Setup executable paths
 $NiceHashPath = "C:\Program Files\NiceHash Miner 2\NiceHash Miner 2.exe"
@@ -77,22 +72,7 @@ function killAfterburner{
 
 $killed = killAfterburner
 if($killed){
-    switch ($event){
-        "unlock" {
-            startAB($onUnlock)
-            writeEventlog($onUnlockMsg,0,1)
-
-        }
-        "lock" {
-            startAB($onLock)
-            writeEventlog($onlockMsg,0,1)
-        }
-        default {
-            # Do nothing
-
-        }
-
-    }
-
+    startAB($profile)
+    writeEventlog("Applied afterburner profile $profile")
 }
 
