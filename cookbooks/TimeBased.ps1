@@ -51,6 +51,7 @@ if(($StartTime.Count -eq $EndTime.Count) -and ($StartTime.Count -eq $ABProfile.C
         if(inTime -StartTimeRange $StartTime[$arrC] -EndTimeRange $EndTime[$arrC] -NowTimeRange $now){
             Write-Host "Using profile"$ABProfile[$arrC]
             &$OCmgrLoc -profile $ABProfile[$arrC]
+            break
         }
         $arrC++
 
