@@ -1,10 +1,8 @@
 # GPU_OC_Manager
-Swap Afterburner profiles based on events
+Swap Afterburner profiles
 
-Expand the switch statement to add additional event.
 
 Example setup:
-
 
 1. Open TaskScheduler
 2. Tick "Run with highest privileges"
@@ -14,7 +12,7 @@ Example setup:
 4. Actions/Action
     1. Start a program
         1. Program/script: powershell
-        2. -Command "& D:\Programs\powershell\GPU_OC_Manager\GPU_OC_Manager.ps1 -event lock"
+        2. -Command "& D:\Programs\powershell\GPU_OC_Manager\GPU_OC_Manager.ps1 -profile <id>"
     
     
     
