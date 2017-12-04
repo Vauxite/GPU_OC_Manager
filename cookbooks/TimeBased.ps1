@@ -10,9 +10,11 @@ param(
 
 ##Example config
 #
-# $StartTime = "07:40","22:00","00:00"
-# $EndTime = "22:00","23:59","07:40"
-# $ABProfile = 5,1,1
+# -StartTime "07:40","22:00","00:00"
+# -EndTime "22:00","23:59","07:40"
+# -ABProfile 5,1,1
+#
+# Above would run profile 5 between 07:40 - 22:00, rest of the time profile 1
 #
 ##End Example config
 
