@@ -12,7 +12,7 @@ Example setup:
 4. Actions/Action
     1. Start a program
         1. Program/script: powershell
-        2. -Command "& D:\Programs\powershell\GPU_OC_Manager\GPU_OC_Manager.ps1 -profile <id>"
+        2. -Command "& D:\Programs\powershell\GPU_OC_Manager\GPU_OC_Manager.ps1 -profile \<id\>"
     
     
     
